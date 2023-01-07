@@ -10,5 +10,3 @@ export enum CART_ACTION_TYPES {
 export type CartItem = CategoryItem & {
   quantity: number;
 };
-
-// TODO 205 Typing Redux Cart Files Pt.1.mp4
