@@ -1,13 +1,37 @@
-export const loggerMiddleware = (store) => (next) => (action) => {
+export const loggerMiddleware = store => next => action => {
   if (!action.type) {
     return next(action);
   }
-
-  console.log('type: ', action.type);
-  console.log('payload: ', action.payload);
-  console.log('currentState: ', store.getState());
+  console.log(
+    //
+    '%c'.padEnd(35, ']'),
+    'color: #88f; font-weight:100;'
+  );
+  console.log(
+    //
+    '%caction: ',
+    'color: #aaa; font-weight:100;',
+    action.type
+  );
+  console.log(
+    //
+    '%cprev: ',
+    'color: #777; font-weight:800;',
+    store.getState()
+  );
+  console.log(
+    //
+    '%caction: ',
+    'color: #0cc; font-weight:800;',
+    action
+  );
 
   next(action);
 
-  console.log('next state: ', store.getState());
+  console.log(
+    //
+    '%cnext state: ',
+    'color: #4c4; font-weight:800;',
+    store.getState()
+  );
 };

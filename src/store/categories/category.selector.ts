@@ -5,7 +5,10 @@ import { CategoryMap } from './category.types';
 
 const selectCategoryReducer = (state): CategoriesState => state.categories; // FIXME (state: any)
 
-export const selectCategories = createSelector([selectCategoryReducer], categoriesSlice => categoriesSlice.categories);
+export const selectCategories = createSelector(
+  [selectCategoryReducer],
+  categoriesSlice => categoriesSlice.categories
+);
 
 export const selectCategoriesMap = createSelector(
   [selectCategories],

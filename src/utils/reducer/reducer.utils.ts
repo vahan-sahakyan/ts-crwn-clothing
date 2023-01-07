@@ -6,12 +6,14 @@ type Matchable<AC extends () => AnyAction> = AC & {
 };
 
 // withMatchaber OVERLOAD
-export function withMatcher<AC extends () => AnyAction & { type: string }>(actionCreator: AC): Matchable<AC>;
-
-// withMatchaber OVERLOAD
-export function withMatcher<AC extends (...args: any[]) => AnyAction & { type: string }>(
+export function withMatcher<AC extends () => AnyAction & { type: string }>(
   actionCreator: AC
 ): Matchable<AC>;
+
+// withMatchaber OVERLOAD
+export function withMatcher<
+  AC extends (...args: any[]) => AnyAction & { type: string }
+>(actionCreator: AC): Matchable<AC>;
 
 // withMatchaber IMPLEMENTATION
 export function withMatcher(actionCreator: Function) {
@@ -36,9 +38,15 @@ export type Action<T> = {
 };
 
 // createAction OVERLOAD
-export function createAction<T extends string, P>(type: T, payload: P): ActionWithPayload<T, P>;
+export function createAction<T extends string, P>(
+  type: T,
+  payload: P
+): ActionWithPayload<T, P>;
 // createAction OVERLOAD
-export function createAction<T extends string>(type: T, payload: void): Action<T>;
+export function createAction<T extends string>(
+  type: T,
+  payload: void
+): Action<T>;
 
 // createAction IMPLEMENTATION
 export function createAction<T extends string, P>(type: T, payload: P) {

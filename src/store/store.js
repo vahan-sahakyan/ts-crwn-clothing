@@ -7,6 +7,7 @@ import createSagaMiddleware from 'redux-saga';
 import { rootSaga } from './root-saga';
 
 import { rootReducer } from './root-reducer';
+import { loggerMiddleware } from './middleware/logger';
 
 const persistConfig = {
   key: 'root',
@@ -21,6 +22,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const middleWares = [
   process.env.NODE_ENV !== 'production' && logger,
   sagaMiddleware,
+  // loggerMiddleware, // custom middleware
 ].filter(Boolean);
 
 const composeEnhancer =
