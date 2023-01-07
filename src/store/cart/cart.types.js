@@ -4,3 +4,5 @@ export const CART_ACTION_TYPES = {
   SET_CART_COUNT: 'cart/SET_CART_COUNT',
   SET_CART_TOTAL: 'cart/SET_CART_TOTAL',
 };
+
+// TODO 205 Typing Redux Cart Files Pt.1.mp4
