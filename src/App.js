@@ -19,11 +19,11 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path='/' element={<Navigation />}>
+      <Route path='/ts-crwn-clothing/' element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path='shop/*' element={<Shop />} />
-        <Route path='auth' element={<Authentication />} />
-        <Route path='checkout' element={<Checkout />} />
+        <Route path='/ts-crwn-clothing/auth' element={<Authentication />} />
+        <Route path='/ts-crwn-clothing/checkout' element={<Checkout />} />
       </Route>
     </Routes>
   );

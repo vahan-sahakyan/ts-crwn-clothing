@@ -28,18 +28,18 @@ const Navigation = () => {
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer to='/'>
+        <LogoContainer to='/ts-crwn-clothing/'>
           <CrwnLogo className='logo' />
         </LogoContainer>
         <NavLinks>
-          <NavLink to='/shop'>SHOP</NavLink>
+          <NavLink to='/ts-crwn-clothing/shop'>SHOP</NavLink>
 
           {currentUser ? (
             <NavLink as='span' onClick={signOutUser}>
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink to='/auth'>SIGN IN</NavLink>
+            <NavLink to='/ts-crwn-clothing/auth'>SIGN IN</NavLink>
           )}
           <CartIcon />
         </NavLinks>
