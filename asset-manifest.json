@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ts-crwn-clothing/static/css/main.22e1987b.css",
+    "main.js": "/ts-crwn-clothing/static/js/main.326c5a73.js",
+    "static/media/shopping-bag.svg": "/ts-crwn-clothing/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
+    "static/media/crown.svg": "/ts-crwn-clothing/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "index.html": "/ts-crwn-clothing/index.html",
+    "main.22e1987b.css.map": "/ts-crwn-clothing/static/css/main.22e1987b.css.map",
+    "main.326c5a73.js.map": "/ts-crwn-clothing/static/js/main.326c5a73.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22e1987b.css",
+    "static/js/main.326c5a73.js"
+  ]
+}
