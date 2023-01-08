@@ -2,6 +2,7 @@
   "name": "crwn-clothing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vahan-sahakyan.github.io/ts-crwn-clothing/",
   "dependencies": {
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.25.0",
@@ -15,6 +16,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "firebase": "9.6.6",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "7.2.6",
@@ -38,7 +40,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
