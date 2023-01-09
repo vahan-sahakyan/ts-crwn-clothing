@@ -2,7 +2,14 @@ import DirectoryItem from '../directory-item/directory-item.component';
 
 import { DirectoryContainer } from './directory.styles';
 
-const categories = [
+export type LocalCategory = {
+  id: number;
+  title: string;
+  imageUrl: string;
+  route: string;
+};
+
+const categories: LocalCategory[] = [
   {
     id: 1,
     title: 'hats',
@@ -38,7 +45,7 @@ const categories = [
 const Directory = () => {
   return (
     <DirectoryContainer>
-      {categories.map((category) => (
+      {categories.map(category => (
         <DirectoryItem key={category.id} category={category} />
       ))}
     </DirectoryContainer>
